@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Mini OH Control</title>
+	<style>
+    	body: { padding: 10px; }
+  	</style>
+</head>
+
+<body>
+	<script type="text/javascript" src="jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="options.js"></script>
+
+	Enter server name: (e.g. <em>home.mydomain.com</em> or <em>thor</em>)
+	<input type="text" name="server" id="serverid" value="localhost" />
+	<br /><br />
+	Enter port number (default for OpenHAB = <em>8082</em>):
+	<input type="text" name="port" id="portid" value="8082"/>
+	<br/><br />
+	Enter the ID of your home sitemap (e.g. <em>home</em>):
+	<input type="text" name="home" id="homeid" value="home" />
+	<br /><br />
+
+	Popup size (try 450 x 900):<br />
+	<input type="number" name="width" id="widthid" value="450" style="width:75px;"> by <input type="number" name="height" id="heightid" value="900" style="width:75px;" >
+	
+	<button id="saveButton">Save</button>
+	<p id="status"></p>
+</body>
+</html>
