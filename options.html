@@ -2,9 +2,14 @@
 <head>
 	<title>Mini OH Control</title>
 	<style>
-		body: { padding: 10px; }
+		body {
+			width: 450px;
+		}
 		#width, #height {
 			width: 75px;
+		}
+		input[type="text"] {
+			width: 100%;
 		}
 	</style>
 </head>
@@ -14,7 +19,7 @@
 	<script type="text/javascript" src="options.js"></script>
 
 	<p>
-		URL to openHAB (e.g. the URL to the basicUI):
+		URL to openHAB (e.g. the URL to the basicUI):<br>
 		<input type="text" id="URL" placeholder="http://openhab.local:8080/basicui/app?sitemap=">
 	</p>
 
