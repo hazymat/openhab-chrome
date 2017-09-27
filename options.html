@@ -3,6 +3,9 @@
 	<title>Mini OH Control</title>
 	<style>
 		body: { padding: 10px; }
+		#width, #height {
+			width: 75px;
+		}
 	</style>
 </head>
 
@@ -10,23 +13,17 @@
 	<script type="text/javascript" src="jquery-2.0.2.min.js"></script>
 	<script type="text/javascript" src="options.js"></script>
 
-	Enter server name: (e.g. <em>home.mydomain.com</em> or <em>thor</em>)
-	<input type="text" name="server" id="serverid" value="localhost" />
-	<br /><br />
-	Enter port number (default for OpenHAB = <em>8082</em>):
-	<input type="text" name="port" id="portid" value="8082"/>
-	<br/><br />
-	Enter the ID of your home sitemap (e.g. <em>home</em>):
-	<input type="text" name="home" id="homeid" value="home" />
-	<br /><br />
-	Popup size (try 450 x 900):<br />
-	<input type="number" name="width" id="widthid" value="450" style="width:75px;"> by <input type="number" name="height" id="heightid" value="900" style="width:75px;" >
-	<p><strong>Advanced Option</strong></p>
-	Customise path here (e.g. <em>/openhab.app?sitemap=</em> for OpenHAB 1.x):
-	<input type="text" name="path" id="pathid" value="/openhab.app?sitemap=" />
-	<br /><br />
-	
-	<button id="saveButton">Save</button>
+	<p>
+		URL to openHAB (e.g. the URL to the basicUI):
+		<input type="text" id="URL" placeholder="http://openhab.local:8080/basicui/app?sitemap=">
+	</p>
+
+	<p>
+		Popup size (try 450 x 900):<br />
+		<input type="number" id="width" value="450"> by <input type="number" id="height" value="900">
+	</p>
+
+	<button id="save">Save</button>
 	<p id="status"></p>
 </body>
 </html>
