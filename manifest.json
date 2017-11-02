@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "OpenHAB Controller (Supports myopenhab)",
-  "short_name": "OpenHAB Controller",
-  "description": "Control your home from a popup from anywhere! (supports HTTPS and myopenhab)",
-  "version": "1.2",
+  "name": "openHAB Controller",
+  "short_name": "openHAB Controller",
+  "description": "Control your home (openHAB 1.0 or 2.0 system) from anywhere with this native google chrome extension! (Supports HTTPS and myopenhab.org)",
+  "version": "2.0",
 
   "options_ui": {
     "page": "options.html",

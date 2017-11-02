@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Mini OH Control</title>
+	<title>OHC2</title>
 	<style>
     	body: { padding: 10px; }
   	</style>
@@ -16,7 +16,11 @@
     <br />
 	<input type="text" name="local_server" id="localserverid" value="http://localhost:8080" size="50"/>
     <br />
-    <font size="0.5">(e.g. <em>http://192.168.0.1:8080</em>, or <em>http://openhab-server:8080</em>)</font>
+    <font size="0.5">
+        (e.g. <em>http://192.168.0.1:8080</em>, or <em>http://openhab-server:8080</em>)
+        <br /><br />
+        * When using myopenhab.org, please manually <a href="https://myopenhab.org/login">go to this login page</a> and log in. After that the extension should work properly.
+    </font>
 	<br /><br />
     <!--
     Remote openHAB server address including port (opt. if 80 or 443):
@@ -32,7 +36,7 @@
 	Customise path after address:
 	<input type="text" name="path" id="pathid" value="/basicui/app" />
 	<br />
-    <font size="0.5">(e.g. <em>/basicui/app</em> for openHAB 2.x Basic UI and <em>/openhab.app?sitemap=default</em> for OpenHAB 1.x)</font>
+    <font size="0.5">(e.g. <em>/basicui/app</em> for openHAB 2.x Basic UI and <em>/openhab.app?sitemap=default</em> for openHAB 1.x)</font>
     <br /><br />
 	
 	<button id="saveButton">Save</button>
