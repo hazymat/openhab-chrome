@@ -3,7 +3,7 @@
 
   "name": "openHAB Controller",
   "short_name": "openHAB Controller",
-  "description": "Control your home (openHAB 1.0 or 2.0 system) from anywhere with this native google chrome extension! (Supports HTTPS and myopenhab.org)",
+  "description": "Control your home from anywhere with openHAB and Google Chrome! (Supports HTTPS and myopenhab.org)",
   "version": "2.0",
 
   "options_ui": {
