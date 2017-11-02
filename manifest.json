@@ -1,16 +1,16 @@
 {
   "manifest_version": 2,
 
-  "name": "Mini OpenHAB Controller",
+  "name": "OpenHAB Controller (Supports myopenhab)",
   "short_name": "OpenHAB Controller",
-  "description": "Control your home from a popup from anywhere!",
+  "description": "Control your home from a popup from anywhere! (supports HTTPS and myopenhab)",
   "version": "1.2",
 
   "options_ui": {
     "page": "options.html",
     "chrome_style": true
   },
-  
+
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
