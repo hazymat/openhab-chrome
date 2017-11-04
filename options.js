@@ -1,9 +1,8 @@
 // Saves options to localStorage.
 function save_options() {
-  
-  localStorage["server_id"] = $("#serverid").val();
-  localStorage["port_id"] = $("#portid").val();
-  localStorage["home_id"] = $("#homeid").val();
+
+  localStorage["local_server_id"] = $("#localserverid").val();
+  localStorage["remote_server_id"] = $("#remoteserverid").val();
   localStorage["path_id"] = $("#pathid").val();
   localStorage["width_id"] = $("#widthid").val();
   localStorage["height_id"] = $("#heightid").val();
@@ -17,21 +16,17 @@ function save_options() {
 
 // Restores select box state to saved value from localStorage.
 function restore_options() {
-  var server_id = localStorage["server_id"];
-  var port_id = localStorage["port_id"];
-  var home_id = localStorage["home_id"];
+  var local_server_id = localStorage["local_server_id"];
+  var remote_server_id = localStorage["remote_server_id"];
   var path_id = localStorage["path_id"];
   var width_id = localStorage["width_id"];
   var height_id = localStorage["height_id"];
   
-  if(server_id){
-    $("#serverid").val(server_id);
+  if(local_server_id){
+    $("#localserverid").val(local_server_id);
   }
-  if(port_id){
-    $("#portid").val(port_id);
-  }
-  if(home_id){
-    $("#homeid").val(home_id);
+  if (remote_server_id) {
+    $("#remoteserverid").val(remote_server_id);
   }
   if(path_id){
     $("#pathid").val(path_id);
