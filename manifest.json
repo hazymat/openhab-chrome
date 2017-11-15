@@ -4,7 +4,11 @@
   "name": "openHAB Controller",
   "short_name": "openHAB Controller",
   "description": "Control your home from anywhere with openHAB and Google Chrome! (Supports HTTPS and myopenhab.org)",
-  "version": "2.0",
+  "version": "2.1",
+
+  "background": {
+    "scripts": ["context-menu.js"]
+  },
 
   "options_ui": {
     "page": "options.html",
@@ -24,6 +28,7 @@
 
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "contextMenus"
   ]
 }

@@ -6,6 +6,15 @@ function save_options() {
   localStorage["width_id"] = $("#widthid").val();
   localStorage["height_id"] = $("#heightid").val();
 
+  // Checks the Local URL radio on the context menu
+  chrome.contextMenus.update("radioRemote", {
+    checked: false
+  });
+  chrome.contextMenus.update("radioLocal", {
+    checked: true
+  });
+  localStorage["active_server_id"] = localStorage["local_server_id"];
+
 	// Update status to let user know options were saved.
 	$("#status").html("Options Saved.");
 	setTimeout(function() {
@@ -20,7 +29,7 @@ function restore_options() {
   var path_id = localStorage["path_id"];
   var width_id = localStorage["width_id"];
   var height_id = localStorage["height_id"];
-  
+
   if(local_server_id){
     $("#localserverid").val(local_server_id);
   }
@@ -40,8 +49,8 @@ function restore_options() {
 
 $(document).ready(function(){
 	restore_options();
-	
-	$("#save").click(function(){
+
+	$("#saveButton").click(function(){
 		save_options();
 	});
 });
