@@ -2,8 +2,16 @@
 <head>
 	<title>OHC2</title>
 	<style>
-    	body: { padding: 10px; }
-  	</style>
+		body {
+			width: 450px;
+		}
+		#width, #height {
+			width: 75px;
+		}
+		input[type="text"] {
+			width: 100%;
+		}
+	</style>
 </head>
 
 <body>
@@ -30,7 +38,7 @@
     <font size="0.5">(e.g. <em>http://home.dyndns.com:8080</em>, or <em>https://home.myopenhab.org</em>)</font>
     <br /><br />
     -->
-	Popup size (try 450 x 900):<br />
+	Popup size (try 450 x 550):<br />
 	<input type="number" name="width" id="widthid" value="450" style="width:75px;"> by <input type="number" name="height" id="heightid" value="900" style="width:75px;" >
 	<p><strong>Advanced Options:</strong></p>
 	Customise path after address:
@@ -40,6 +48,7 @@
     <br /><br />
 	
 	<button id="saveButton">Save</button>
+
 	<p id="status"></p>
 </body>
 </html>
