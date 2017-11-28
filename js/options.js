@@ -1,21 +1,20 @@
 // Saves options to localStorage.
+
+const DEFAULT_MYOPENHAB_URL = "https://home.myopenhab.org";
+const DEFAULT_PATH = "basicui/app";
+const DEFAULT_WIDTH = 400;
+const DEFAULT_HEIGHT = 500;
+
 function save_options() {
-  localStorage["local_server_id"] = $("#localserverid").val();
-  localStorage["remote_server_id"] = $("#remoteserverid").val();
-  localStorage["path_id"] = $("#pathid").val();
-  localStorage["width_id"] = $("#widthid").val();
-  localStorage["height_id"] = $("#heightid").val();
+  let values = {local_server_id: document.querySelector("#localserverid").value,
+                remote_server_id: document.querySelector("#remoteserverid").value,
+                path_id: document.querySelector("#pathid").value,
+                width_id: document.querySelector("#widthid").value,
+                height_id: document.querySelector("#heightid").value
+  };
+  chrome.storage.local.set(values, function() {});
 
-  // Checks the Local URL radio on the context menu
-  chrome.contextMenus.update("radioRemote", {
-    checked: false
-  });
-  chrome.contextMenus.update("radioLocal", {
-    checked: true
-  });
-  localStorage["active_server_id"] = localStorage["local_server_id"];
-
-	// Update status to let user know options were saved.
+  // Update status to let user know options were saved.
 	$("#status").html("Options Saved.");
 	setTimeout(function() {
 		$("#status").html("");
@@ -24,27 +23,16 @@ function save_options() {
 
 // Restores select box state to saved value from localStorage.
 function restore_options() {
-  var local_server_id = localStorage["local_server_id"];
-  var remote_server_id = localStorage["remote_server_id"];
-  var path_id = localStorage["path_id"];
-  var width_id = localStorage["width_id"];
-  var height_id = localStorage["height_id"];
-
-  if(local_server_id){
-    $("#localserverid").val(local_server_id);
-  }
-  if (remote_server_id) {
-    $("#remoteserverid").val(remote_server_id);
-  }
-  if(path_id){
-    $("#pathid").val(path_id);
-  }
-  if(width_id){
-    $("#widthid").val(width_id);
-  }
-  if(height_id){
-    $("#heightid").val(height_id);
-  }
+  chrome.storage.local.get(null, function(items) {
+    const fetchedValues = Object(items);
+    console.log(fetchedValues);
+    console.log(fetchedValues.local_server_id);
+    document.querySelector("#localserverid").value = fetchedValues.local_server_id || null;
+    document.querySelector("#remoteserverid").value = fetchedValues.remote_server_id || null;
+    document.querySelector("#pathid").value = fetchedValues.path_id || null;
+    document.querySelector("#widthid").value = fetchedValues.width_id ;
+    document.querySelector("#heightid").value = fetchedValues.height_id;
+  });
 }
 
 $(document).ready(function(){
