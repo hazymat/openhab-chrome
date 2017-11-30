@@ -12,9 +12,7 @@ chrome.contextMenus.create({
       let values = {
         active_server_id: fetchedValues.local_server_id
       };
-      chrome.storage.local.set(values, function() {
-        console.log("Switched to local URL")
-      });
+      chrome.storage.local.set(values, function() {});
     });
   }
 });
@@ -30,9 +28,7 @@ chrome.contextMenus.create({
       let values = {
         active_server_id: fetchedValues.remote_server_id
       };
-      chrome.storage.local.set(values, function() {
-        console.log("Switched to remote URL");
-      });
+      chrome.storage.local.set(values, function() {});
     });
   }
 });

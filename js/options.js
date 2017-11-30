@@ -3,7 +3,7 @@
 const DEFAULT_MYOPENHAB_URL = "https://home.myopenhab.org";
 const DEFAULT_PATH = "basicui/app";
 const DEFAULT_WIDTH = 400;
-const DEFAULT_HEIGHT = 500;
+const DEFAULT_HEIGHT = 550;
 
 function save_options() {
   let values = {local_server_id: document.querySelector("#localserverid").value,
@@ -25,13 +25,11 @@ function save_options() {
 function restore_options() {
   chrome.storage.local.get(null, function(items) {
     const fetchedValues = Object(items);
-    console.log(fetchedValues);
-    console.log(fetchedValues.local_server_id);
     document.querySelector("#localserverid").value = fetchedValues.local_server_id || null;
-    document.querySelector("#remoteserverid").value = fetchedValues.remote_server_id || null;
-    document.querySelector("#pathid").value = fetchedValues.path_id || null;
-    document.querySelector("#widthid").value = fetchedValues.width_id ;
-    document.querySelector("#heightid").value = fetchedValues.height_id;
+    document.querySelector("#remoteserverid").value = fetchedValues.remote_server_id || DEFAULT_MYOPENHAB_URL;
+    document.querySelector("#pathid").value = fetchedValues.path_id || DEFAULT_PATH;
+    document.querySelector("#widthid").value = fetchedValues.width_id || DEFAULT_WIDTH;
+    document.querySelector("#heightid").value = fetchedValues.height_id || DEFAULT_HEIGHT;
   });
 }
 
