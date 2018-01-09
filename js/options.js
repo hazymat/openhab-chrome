@@ -1,7 +1,7 @@
 // Saves options to localStorage.
 
 const DEFAULT_MYOPENHAB_URL = "https://home.myopenhab.org";
-const DEFAULT_PATH = "basicui/app";
+const DEFAULT_PATH = "/basicui/app";
 const DEFAULT_WIDTH = 400;
 const DEFAULT_HEIGHT = 550;
 
