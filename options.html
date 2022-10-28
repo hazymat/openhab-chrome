@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>OHC2</title>
+	<title>Mini OH Control</title>
 	<style>
 		body {
 			width: 450px;
@@ -18,36 +18,17 @@
 	<script type="text/javascript" src="jquery-2.0.2.min.js"></script>
 	<script type="text/javascript" src="options.js"></script>
 
-    <p><strong>Basic Setup:</strong></p>
-    <!--Remember to change text to "local server" when the feature to try it first is implemented-->
-	Local openHAB server address including port (optional if 80 or 443):
-  <br />
-	<input type="text" name="local_server" id="localserverid" value="http://localhost:8080" size="50"/>
-	<br />
-  <font size="0.5">(e.g. <em>http://192.168.0.1:8080</em>, or <em>http://openhab-server:8080</em>)</font>
-  <br /><br />
-  Remote openHAB server address including port (optional if 80 or 443):
-  <br />
-  <input type="text" name="remote_server" id="remoteserverid" value="https://home.myopenhab.org" size="50" />
-  <br />
-	<font size="0.5">
-		(e.g. <em>http://home.dyndns.com:8080</em>, or <em>https://home.myopenhab.org</em>)
-		<br />
-		* When using myopenhab.org, please manually <a href="https://myopenhab.org/login">go to this login page</a> and log in. After that the extension should work properly.
-	</font>
-	<br /><br />
-	Popup size (Default: 450 x 550):<br />
-	<input type="number" name="width" id="widthid" value="450" style="width:75px;"> by <input type="number" name="height" id="heightid" value="550" style="width:75px;" >
-  <br /><br />
-	<p><strong>Advanced Options:</strong></p>
-	Customise path after address:
-	<input type="text" name="path" id="pathid" value="/basicui/app" />
-	<br />
-    <font size="0.5">(e.g. <em>/basicui/app</em> for openHAB 2.x Basic UI and <em>/openhab.app?sitemap=default</em> for openHAB 1.x)</font>
-    <br /><br />
+	<p>
+		URL to openHAB (e.g. the URL to the basicUI):<br>
+		<input type="text" id="URL" placeholder="http://openhab.local:8080/basicui/app">
+	</p>
 
-	<button id="saveButton">Save</button>
+	<p>
+		Popup size (try 450 x 900):<br />
+		<input type="number" id="width" value="450"> by <input type="number" id="height" value="900">
+	</p>
 
+	<button id="save">Save</button>
 	<p id="status"></p>
 </body>
 </html>
