@@ -21,10 +21,10 @@ function restore_options() {
 		$("#URL").val(URL);
 	}
 	if(width){
-		$("#width").val(width_id);
+		$("#width").val(width);
 	}
 	if(height){
-		$("#height").val(height_id);
+		$("#height").val(height);
 	}
 }
 
